@@ -1,54 +1,12 @@
-import Link from "next/link";
-import Image from "next/image";
+import BookPreview from "@/components/book-preview";
 
 export default function Home() {
   return (
-    <>
-      <header>
-        <h1>
-          <Link href="/">Bookstore</Link>
-        </h1>
-        <nav>
-          <ul>
-            <li>
-              <Link href="">Browse</Link>
-            </li>
-          </ul>
-        </nav>
-        <form>
-          <input
-            type="search"
-            placeholder="Search for a book..."
-            aria-label="Search"
-          />
-          <button>Search</button>
-        </form>
-        <button>Cart</button>
-      </header>
-      <main>
-        {books.map((book) => (
-          <article key={book.id}>
-            <h2>{book.title}</h2>
-            <p>{book.author}</p>
-            <Image
-              src="https://placehold.co/200/white/white.png"
-              width={200}
-              height={200}
-              alt={book.title}
-            />
-            <p>${book.price}</p>
-          </article>
-        ))}
-      </main>
-      <footer>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-        </ul>
-        <p>&copy; 2024</p>
-      </footer>
-    </>
+    <main>
+      {books.map((book) => (
+        <BookPreview key={book.id} book={book} />
+      ))}
+    </main>
   );
 }
 
