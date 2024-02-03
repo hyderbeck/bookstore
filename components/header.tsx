@@ -9,7 +9,7 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <Link href="">Browse</Link>
+            <Link href="/browse">Browse</Link>
           </li>
         </ul>
       </nav>

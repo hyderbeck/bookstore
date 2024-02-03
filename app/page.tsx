@@ -10,7 +10,7 @@ export default function Home() {
   );
 }
 
-const books = [
+export const books = [
   { id: 1, title: "To Kill a Mockingbird", author: "Harper Lee", price: 9.99 },
   {
     id: 2,
